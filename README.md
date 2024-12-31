@@ -20,3 +20,37 @@
   - price (Number, default, with validation for positive values)
 - Created the model based on book schema
 - exported the model
+
+## Setting up the Server
+
+- Made a file named server.js (./server.js)
+- Configured dotenv to load environment variables
+- Imported database.js (./db/database)
+- Set up middleware (express.json())
+- Imported and used the book routes
+- Started the server
+
+## Creating the Book Routes
+
+- Made a folder named routes (./routes)
+- Made a file inside routes named as books.js (./routes/books)
+- Created the following routes:
+  - POST /books - To Create a new book
+  - GET /books - To Fetch all books
+  - PUT /books/:title - To Update a book by title
+  - DELETE /books/:title - To Delete a book by title
+  - GET /books/genre/:genre - To Fetch a book by genre
+- Exported the router
+
+## Creating the Book Controllers (./controllers/books)
+
+- Made a folder named controllers (./controllers)
+- Made a file inside controllers named as books.js (./controllers/books)
+- Imported the book model
+- Created functions for the following operations:
+  - createBook - Creating a new book
+  - getAllBooks - Fetching all books
+  - updateBookByTitle - Updating a book by title
+  - deleteBookByTitle - Deleting a book by title
+  - getBookByGenre - Fetching a single book by genre
+- Exported the controller functions
